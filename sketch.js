@@ -24,7 +24,7 @@ function setup() {
 
 function mousePressed() {
 	speed = random(0.01, 0.05);
-  maxCircleSize = random(40);
+	// maxCircleSize = random(40);
   numRows = random(2, 5);
   numCols = random(6, 20);
 	distance = random(200);
@@ -42,6 +42,8 @@ function draw() {
 	var mousecolor2 = 255 - mousecolor;
 	var mousecolor3 = mouseY / height * 255;
   colorA = color(mousecolor2, mousecolor2, mousecolor2, mousecolor3);
+
+	maxCircleSize = mouseY / height * width / 10;
 
   phase = frameCount * speed;
   
